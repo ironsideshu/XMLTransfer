@@ -1,5 +1,5 @@
 class TransferController < ApplicationController
-	respond_to :html, :xml
+	#respond_to :html, :xml
 
 	def xml
 		
@@ -20,7 +20,7 @@ class TransferController < ApplicationController
 
 		req = Net::HTTP::Get.new(url.request_uri)
 		#req["token"] = "nPQjQSSBMYMlcNvdpEuVQnabTXXBKfcC"
-		@res = Net::HTTP.start(url.host, url.port) { http.request(req) }
-		render xml: @res.body
+		res = Net::HTTP.start(url.host, url.port) { http.request(req) }
+		render xml: res.body
 	end
 end
