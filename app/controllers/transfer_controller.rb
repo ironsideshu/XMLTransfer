@@ -14,7 +14,7 @@ class TransferController < ApplicationController
 	end
 
 	def csv
-		url = URI.parse('http://www.spc.noaa.gov/products/outlook/day1otlk_wind.kml')
+		url = URI.parse('http://www.yahoo.com')
 		http = Net::HTTP.new(url.host, url.port)
 		#http.use_ssl = true
 
