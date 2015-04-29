@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
-  get 'transfer/xml'
 
+  root :to => redirect('transfer/csv')
+
+  get 'transfer/xml'
   get 'transfer/csv'
+
+  resources :transfer
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
