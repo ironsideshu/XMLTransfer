@@ -2,8 +2,14 @@ Rails.application.routes.draw do
 
   root :to => redirect('transfer/csv')
 
-  get 'transfer/xml'
-  get 'transfer/csv'
+  get 'transfer/day1ConvectiveWind'
+  get 'transfer/day1ConvectiveTornado'
+  get 'transfer/day1ConvectiveHail'
+  get 'transfer/day1ConvectiveCat'
+  get 'transfer/day2ConvectiveCat'
+  get 'transfer/day3ConvectiveCat'
+  get 'transfer/day2ConvectiveProb'
+  get 'transfer/day3ConvectiveProb'
 
   resources :transfer
 
