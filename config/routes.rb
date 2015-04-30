@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root :to => redirect('transfer/csv')
+  root :to => redirect('transfer/landing')
 
   get 'transfer/day1ConvectiveWind'
   get 'transfer/day1ConvectiveTornado'
@@ -10,7 +10,8 @@ Rails.application.routes.draw do
   get 'transfer/day3ConvectiveCat'
   get 'transfer/day2ConvectiveProb'
   get 'transfer/day3ConvectiveProb'
-
+  get 'transfer/landing'
+  
   resources :transfer
 
   # The priority is based upon order of creation: first created -> highest priority.

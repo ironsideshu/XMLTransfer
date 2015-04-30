@@ -1,5 +1,6 @@
 class TransferController < ApplicationController
 	require 'net/http'
+	before_action only: [:landing]
 
 	def returnXML(link)
 		url = URI.parse(link)
